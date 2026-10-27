@@ -1,232 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>SampaTour | Reserva</title>
 
-    <meta name="keywords" content="reserva, passeios, turismo, São Paulo, SampaTour">
-    <meta name="description" content="Reserve seu passeio turístico pela cidade de São Paulo com a SampaTour.">
+    <meta
+      name="keywords"
+      content="reserva, passeios, turismo, São Paulo, SampaTour"
+    />
+    <meta
+      name="description"
+      content="Reserve seu passeio turístico pela cidade de São Paulo com a SampaTour."
+    />
 
-    <link rel="icon" type="image/svg+xml" href="icons/logotipo-preto.svg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="icon" type="image/svg+xml" href="icons/logotipo-preto.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body class="pagina-reserva">
-
+  <body class="pagina-reserva">
     <header class="cabecalho" id="inicio">
+      <h1 class="titulo-principal">
+        FAÇA SUA <span class="titulo-destaque">RESERVA</span>
+      </h1>
 
-        <h1 class="titulo-principal">FAÇA SUA <span class="titulo-destaque">RESERVA</span></h1>
+      <p class="slogan">
+        Escolha seu roteiro, a data e o horário. Leva menos de um minuto
+      </p>
 
-        <p class="slogan">
-            Escolha seu roteiro, a data e o horário.
-            Leva menos de um minuto
-        </p>
+      <nav
+        class="menu navbar navbar-expand-md"
+        aria-label="Menu principal"
+        data-bs-theme="dark"
+      >
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu-nav"
+          aria-controls="menu-nav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <nav class="menu navbar navbar-expand-md" aria-label="Menu principal" data-bs-theme="dark">
-            <button class="navbar-toggler ms-auto" type="button"
-                data-bs-toggle="collapse" data-bs-target="#menu-nav"
-                aria-controls="menu-nav" aria-expanded="false" aria-label="Abrir menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menu-nav">
-                <ul class="menu-lista navbar-nav">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="pacotes.html">Pacotes</a></li>
-                    <li><a href="reserva.html">Reservar</a></li>
-                    <li><a href="sobre.html">Sobre nós</a></li>
-                </ul>
-            </div>
-        </nav>
-
+        <div class="collapse navbar-collapse" id="menu-nav">
+          <ul class="menu-lista navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="pacotes.html">Pacotes</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <section class="secao-reserva" id="reserva">
+        <h2>INFORMAÇÕES DA RESERVA</h2>
 
-        <section class="secao-reserva" id="reserva">
+        <p class="descricao-reserva">
+          Preencha os dados abaixo para solicitar sua reserva.
+        </p>
 
-            <h2>INFORMAÇÕES DA RESERVA</h2>
+        <form class="formulario-reserva" action="#" method="post" novalidate>
+          <fieldset class="dados-pessoais">
+            <legend>Dados pessoais</legend>
 
-            <p class="descricao-reserva">
-                Preencha os dados abaixo para solicitar sua reserva.
-            </p>
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              required
+            />
 
-            <form class="formulario-reserva" action="#" method="post">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
 
-                <fieldset class="dados-pessoais">
+            <label for="celular">Telefone</label>
+            <input
+              type="tel"
+              id="celular"
+              name="celular"
+              autocomplete="tel"
+              required
+            />
+          </fieldset>
 
-                    <legend>Dados pessoais</legend>
+          <fieldset class="dados-passeio">
+            <legend>Detalhes do passeio</legend>
 
-                    <label for="nome">Nome completo</label>
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        autocomplete="name"
-                        required
-                    >
+            <label for="tour">Tour escolhido</label>
+            <select id="tour" name="tour" required>
+              <option value="">Selecione um passeio</option>
+              <optgroup label="História e Cultura">
+                <option value="sampa-assombrada">Sampa Assombrada</option>
+                <option value="sampa-antiga">Sampa Antiga</option>
+                <option value="sampa-italiana">Sampa Italiana</option>
+                <option value="sampa-japonesa">Sampa Japonesa</option>
+              </optgroup>
+              <optgroup label="Arte e Arquitetura">
+                <option value="sampa-artistica">Sampa Artística</option>
+                <option value="sampa-urbana">Sampa Urbana</option>
+                <option value="sampa-arquitetonica">Sampa Arquitetônica</option>
+              </optgroup>
+              <optgroup label="Gastronomia">
+                <option value="sampa-de-sabores">Sampa de Sabores</option>
+                <option value="sampa-oriental-gastronomica">
+                  Sampa Oriental Gastronômica
+                </option>
+                <option value="sampa-cafe">Sampa Café</option>
+              </optgroup>
+              <optgroup label="Pontos Turísticos">
+                <option value="sampa-verde">Sampa Verde</option>
+                <option value="sampa-do-alto">Sampa do Alto</option>
+                <option value="sampa-independente">Sampa Independente</option>
+              </optgroup>
+            </select>
 
-                    <label for="email">E-mail</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        required
-                    >
+            <label for="data">Data do passeio</label>
+            <input type="date" id="data" name="data" required />
 
-                    <label for="celular">Telefone</label>
-                    <input
-                        type="tel"
-                        id="celular"
-                        name="celular"
-                        autocomplete="tel"
-                        required
-                    >
+            <label for="pessoas">Número de pessoas</label>
+            <input
+              type="number"
+              id="pessoas"
+              name="pessoas"
+              min="1"
+              value="1"
+              required
+            />
 
-                </fieldset>
+            <fieldset class="horarios-passeio">
+              <legend>Horário</legend>
 
-                <fieldset class="dados-passeio">
+              <input
+                type="radio"
+                id="manha"
+                name="horario"
+                value="manha"
+                checked
+                required
+              />
+              <label for="manha">Manhã 09h</label>
 
-                    <legend>Detalhes do passeio</legend>
+              <input type="radio" id="tarde" name="horario" value="tarde" />
+              <label for="tarde">Tarde 14h</label>
 
-                    <label for="tour">Tour escolhido</label>
-                    <select id="tour" name="tour" required>
-                        <option value="">Selecione um passeio</option>
-                        <option value="centro-historico">Centro Histórico</option>
-                        <option value="tour2">Tour 2</option>
-                        <option value="tour3">Tour 3</option>
-                        <option value="tour4">Tour 4</option>
-                        <option value="tour5">Tour 5</option>
-                    </select>
+              <input type="radio" id="noite" name="horario" value="noite" />
+              <label for="noite">Noite 19h</label>
+            </fieldset>
 
-                    <label for="data">Data do passeio</label>
-                    <input
-                        type="date"
-                        id="data"
-                        name="data"
-                        required
-                    >
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+          </fieldset>
 
-                    <label for="pessoas">Número de pessoas</label>
-                    <input
-                        type="number"
-                        id="pessoas"
-                        name="pessoas"
-                        min="1"
-                        value="1"
-                        required
-                    >
+          <fieldset class="termos-reserva">
+            <legend>Confirmação</legend>
 
-                    <fieldset class="horarios-passeio">
+            <input type="checkbox" id="termos" name="termos" required />
+            <label for="termos"> Aceito os termos e condições </label>
+          </fieldset>
 
-                        <legend>Horário</legend>
-
-                        <input
-                            type="radio"
-                            id="manha"
-                            name="horario"
-                            value="manha"
-                            checked
-                            required
-                        >
-                        <label for="manha">Manhã 09h</label>
-
-                        <input
-                            type="radio"
-                            id="tarde"
-                            name="horario"
-                            value="tarde"
-                        >
-                        <label for="tarde">Tarde 14h</label>
-
-                        <input
-                            type="radio"
-                            id="noite"
-                            name="horario"
-                            value="noite"
-                        >
-                        <label for="noite">Noite 19h</label>
-
-                    </fieldset>
-
-                    <label for="observacoes">Observações</label>
-                    <textarea
-                        id="observacoes"
-                        name="observacoes"
-                        rows="3"
-                    ></textarea>
-
-                </fieldset>
-
-                <fieldset class="termos-reserva">
-
-                    <legend>Confirmação</legend>
-
-                    <input
-                        type="checkbox"
-                        id="termos"
-                        name="termos"
-                        required
-                    >
-                    <label for="termos">
-                        Aceito os termos e condições
-                    </label>
-
-                </fieldset>
-
-                <button class="botao-reserva" type="submit">
-                    CONFIRMAR RESERVA
-                </button>
-
-            </form>
-
-        </section>
-
+          <button class="botao-reserva" type="submit">CONFIRMAR RESERVA</button>
+        </form>
+      </section>
     </main>
 
+    <!-- Pop-up com os dados da reserva-->
+    <dialog
+      class="janela-detalhes"
+      id="janela-resumo"
+      aria-labelledby="resumo-titulo"
+    >
+      <button
+        type="button"
+        class="janela-fechar"
+        id="resumo-fechar"
+        aria-label="Fechar"
+      >
+        &times;
+      </button>
+      <section class="janela-corpo">
+        <p class="janela-categoria">SampaTour</p>
+        <h3 class="janela-titulo" id="resumo-titulo">Reserva solicitada!</h3>
+        <p class="janela-meta">Confira os dados que você preencheu:</p>
+        <dl class="janela-texto" id="resumo-lista"></dl>
+      </section>
+    </dialog>
+
     <footer class="rodape" id="contato">
+      <h2>ENTRE EM CONTATO</h2>
 
-        <h2>ENTRE EM CONTATO</h2>
-
-        <section class="informacoes-contato" aria-label="Informações de contato">
-
-            <section class="contato-item">
-                <h3>LOCALIZAÇÃO</h3>
-                <p>São Paulo - SP</p>
-            </section>
-
-            <section class="contato-item">
-                <h3>TELEFONE</h3>
-                <p>
-                    <a href="tel:+551140028922">(11) 4002-8922</a>
-                </p>
-            </section>
-
-            <section class="contato-item">
-                <h3>E-MAIL</h3>
-                <p>
-                    <a href="mailto:sac@sampatour.com.br">
-                        sac@sampatour.com.br
-                    </a>
-                </p>
-            </section>
-
-            <section class="contato-item">
-                <h3>REDES SOCIAIS</h3>
-                <p>@sampatour</p>
-            </section>
-
+      <section class="informacoes-contato" aria-label="Informações de contato">
+        <section class="contato-item">
+          <h3>LOCALIZAÇÃO</h3>
+          <p>São Paulo - SP</p>
         </section>
 
+        <section class="contato-item">
+          <h3>TELEFONE</h3>
+          <p>
+            <a href="tel:+551140028922">(11) 4002-8922</a>
+          </p>
+        </section>
+
+        <section class="contato-item">
+          <h3>E-MAIL</h3>
+          <p>
+            <a href="mailto:sac@sampatour.com.br"> sac@sampatour.com.br </a>
+          </p>
+        </section>
+
+        <section class="contato-item">
+          <h3>REDES SOCIAIS</h3>
+          <p>@sampatour</p>
+        </section>
+      </section>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

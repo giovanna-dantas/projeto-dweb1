@@ -2249,6 +2249,118 @@ body.pagina-sobre .contato-item a:hover {
   color: var(--vermelho);
 }
 
+/* Pop-up do resumo da reserva (mesmo visual da janela dos pacotes) */
+
+body.pagina-reserva:has(dialog[open]) {
+  overflow: hidden;
+}
+
+body.pagina-reserva .janela-detalhes {
+  position: fixed;
+  inset: 0;
+  width: min(92vw, 640px);
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #000000;
+  font-family: var(--fonte-form);
+  box-shadow: 0 -7px 0 0 var(--vermelho);
+}
+
+body.pagina-reserva .janela-detalhes::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.pagina-reserva .janela-fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+body.pagina-reserva .janela-fechar:hover,
+body.pagina-reserva .janela-fechar:focus-visible {
+  background: var(--vermelho);
+  outline: none;
+}
+
+body.pagina-reserva .janela-corpo {
+  padding: 22px 26px 28px;
+}
+
+body.pagina-reserva .janela-categoria {
+  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}
+
+body.pagina-reserva .janela-titulo {
+  margin-bottom: 6px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+body.pagina-reserva .janela-meta {
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8a8a8a;
+}
+
+/* Lista de dados preenchidos */
+
+body.pagina-reserva .janela-texto dt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}
+
+body.pagina-reserva .janela-texto dd {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #111111;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  body.pagina-reserva .janela-corpo {
+    padding: 18px 20px 24px;
+  }
+
+  body.pagina-reserva .janela-titulo {
+    font-size: 24px;
+  }
+}
+
 /*
    RESPONSIVO
  */
