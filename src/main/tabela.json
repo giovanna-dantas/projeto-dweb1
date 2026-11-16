@@ -1,0 +1,93 @@
+[
+  {
+    "passeio": "Sampa Assombrada",
+    "saida": "Estação São Bento",
+    "dia": "Sexta-feira",
+    "horario": "20h30",
+    "valor": "R$ 70,00"
+  },
+  {
+    "passeio": "Sampa Antiga",
+    "saida": "Praça da República",
+    "dia": "Sábado",
+    "horario": "12h",
+    "valor": "R$ 30,00"
+  },
+  {
+    "passeio": "Sampa Italiana",
+    "saida": "Estação Brigadeiro",
+    "dia": "Sábado",
+    "horario": "10h",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Japonesa",
+    "saida": "Estação Japão-Liberdade",
+    "dia": "Domingo",
+    "horario": "9h",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Artística",
+    "saida": "Estação da Luz",
+    "dia": "Terça-feira",
+    "horario": "9h",
+    "valor": "R$ 45,00"
+  },
+  {
+    "passeio": "Sampa Urbana",
+    "saida": "Vila Madalena",
+    "dia": "Sábado",
+    "horario": "10h",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Arquitetônica",
+    "saida": "MASP",
+    "dia": "Domingo",
+    "horario": "9h",
+    "valor": "R$ 30,00"
+  },
+  {
+    "passeio": "Sampa de Sabores",
+    "saida": "Mercado Municipal",
+    "dia": "Sábado",
+    "horario": "9h",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Oriental Gastronômica",
+    "saida": "Estação Japão-Liberdade",
+    "dia": "Domingo",
+    "horario": "12h30",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Café",
+    "saida": "Vila Madalena",
+    "dia": "Domingo",
+    "horario": "9h",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa Verde",
+    "saida": "Parque Ibirapuera",
+    "dia": "Sábado",
+    "horario": "8h30",
+    "valor": "R$ 25,00"
+  },
+  {
+    "passeio": "Sampa do Alto",
+    "saida": "Largo São Bento",
+    "dia": "Sábado",
+    "horario": "14h",
+    "valor": "R$ 30,00"
+  },
+  {
+    "passeio": "Sampa Independente",
+    "saida": "Parque da Independência",
+    "dia": "Domingo",
+    "horario": "9h",
+    "valor": "R$ 45,00"
+  }
+]
